@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at BCD_clock.v(20): always construct contains both blocking and non-blocking assignments File: C:/diseno con logica programable/decodificador_BCD_clock/BCD_clock.v Line: 20

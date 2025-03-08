@@ -1,0 +1,108 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  max10
+Quartus root          :  c:/intelfpga_lite/23.1std/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/23.1std/quartus/eda/sim_lib
+Simulation Tool       :  questa intel fpga
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  BCD_clock.vo
+Sim SDF file          :  BCD_clock__verilog.sdo
+Sim dir               :  simulation\questa
+
+=======================================================
+
+Info: Starting NativeLink simulation with Questa Intel FPGA software
+Sourced NativeLink script c:/intelfpga_lite/23.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File BCD_clock_run_msim_gate_verilog.do already exists - backing up current file as BCD_clock_run_msim_gate_verilog.do.bak6
+Probing transcript
+Questa Intel FPGA Info: # Reading pref.tcl
+Questa Intel FPGA Info: # //  Questa Intel Starter FPGA Edition-64
+Questa Intel FPGA Info: # //  Version 2023.3 win64 Jul 17 2023
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  Copyright 1991-2023 Mentor Graphics Corporation
+Questa Intel FPGA Info: # //  All Rights Reserved.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # //  QuestaSim and its associated documentation contain trade
+Questa Intel FPGA Info: # //  secrets and commercial or financial information that are the property of
+Questa Intel FPGA Info: # //  Mentor Graphics Corporation and are privileged, confidential,
+Questa Intel FPGA Info: # //  and exempt from disclosure under the Freedom of Information Act,
+Questa Intel FPGA Info: # //  5 U.S.C. Section 552. Furthermore, this information
+Questa Intel FPGA Info: # //  is prohibited from disclosure under the Trade Secrets Act,
+Questa Intel FPGA Info: # //  18 U.S.C. Section 1905.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # do BCD_clock_run_msim_gate_verilog.do
+Questa Intel FPGA Info: # if {[file exists gate_work]} {
+Questa Intel FPGA Info: # 	vdel -lib gate_work -all
+Questa Intel FPGA Info: # }
+Questa Intel FPGA Info: # vlib gate_work
+Questa Intel FPGA Info: # vmap work gate_work
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+Questa Intel FPGA Info: # vmap work gate_work 
+Questa Intel FPGA Info: # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+Questa Intel FPGA Info: # Modifying modelsim.ini
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+. {BCD_clock.vo}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+Questa Intel FPGA Info: # Start time: 08:49:21 on Mar 03,2025
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." BCD_clock.vo 
+Questa Intel FPGA Info: # -- Compiling module BCD_clock
+Questa Intel FPGA Info: # -- Compiling module hard_block
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	BCD_clock
+Questa Intel FPGA Info: # End time: 08:49:21 on Mar 03,2025, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+C:/Users/joser/Desktop/diseno\ con\ logica\ programable/decodificador_BCD_clock {C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+Questa Intel FPGA Info: # Start time: 08:49:21 on Mar 03,2025
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock" C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v 
+Questa Intel FPGA Info: # -- Compiling module BCD_clock_tb
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	BCD_clock_tb
+Questa Intel FPGA Info: # End time: 08:49:21 on Mar 03,2025, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs="+acc"  BCD_clock_tb
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L gate_work -L work -voptargs=""+acc"" BCD_clock_tb 
+Questa Intel FPGA Info: # Start time: 08:49:21 on Mar 03,2025
+Questa Intel FPGA Info: # ** Note: (vsim-3812) Design is being optimized...
+Questa Intel FPGA Warning: # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Questa Intel FPGA Warning: # ** Warning: BCD_clock.vo(2242): (vopt-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
+Questa Intel FPGA Warning: # ** Warning: BCD_clock.vo(2242): (vopt-2718) [TFMPC] - Missing connection for port 'clk_dft'.
+Questa Intel FPGA Warning: # ** Warning: BCD_clock.vo(2265): (vopt-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
+Questa Intel FPGA Warning: # ** Warning: BCD_clock.vo(2265): (vopt-2718) [TFMPC] - Missing connection for port 'clk_dft'.
+Questa Intel FPGA Warning: # ** Warning: C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v(9): (vopt-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 7, found 4.
+Questa Intel FPGA Warning: # ** Warning: C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v(9): (vopt-2718) [TFMPC] - Missing connection for port 'data_in'.
+Questa Intel FPGA Warning: # ** Warning: C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v(9): (vopt-2718) [TFMPC] - Missing connection for port 'carga'.
+Questa Intel FPGA Warning: # ** Warning: C:/Users/joser/Desktop/diseno con logica programable/decodificador_BCD_clock/BCD_clock_tb.v(9): (vopt-2718) [TFMPC] - Missing connection for port 'boton_decrese'.
+Questa Intel FPGA Info: # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+Questa Intel FPGA Info: # Loading work.BCD_clock_tb(fast)
+Questa Intel FPGA Info: # Loading work.BCD_clock(fast)
+Questa Intel FPGA Info: # ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'BCD_clock_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+Questa Intel FPGA Info: #    Time: 0 ps  Iteration: 0  Instance: /BCD_clock_tb/uut File: BCD_clock.vo
+Questa Intel FPGA Info: # Loading work.hard_block(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_clkctrl(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_mux41(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_ena_reg(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf(fast__1)
+Questa Intel FPGA Info: # Loading altera_ver.dffeas(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb(fast__1)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_unvm(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_adcblock(fast)
+Questa Intel FPGA Info: # Loading fiftyfivenm_ver.fiftyfivenm_adcblock(fast__1)
+Questa Intel FPGA Info: # Error loading design
+Questa Intel FPGA Info: # Error: Error loading design
+Questa Intel FPGA Info: #        Pausing macro execution
+Questa Intel FPGA Info: # MACRO ./BCD_clock_run_msim_gate_verilog.do PAUSED at line 12
+Questa Intel FPGA Info: # End time: 08:49:43 on Mar 03,2025, Elapsed time: 0:00:22
+Questa Intel FPGA Info: # Errors: 1, Warnings: 9
+Info: NativeLink simulation flow was successful

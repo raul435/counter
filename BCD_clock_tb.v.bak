@@ -1,0 +1,46 @@
+`timescale 1ns / 1ps
+
+module BCD_clock_tb;
+
+    reg clk;
+    reg rst;
+    reg rst_a_p;
+    wire [0:6] seg_out;
+
+    // Instancia del módulo BCD_clock
+    BCD_clock uut (
+        .clk(clk),
+        .rst(rst),
+        .rst_a_p(rst_a_p),
+        .seg_out(seg_out)
+    );
+
+    // Generación del reloj de 50 MHz (período de 20 ns)
+    always #10 clk = ~clk;
+
+    initial begin
+        // Inicialización de señales
+        clk = 0;
+        rst = 1;
+        rst_a_p = 0;
+        
+        // Esperar algunos ciclos y soltar reset
+        #50 rst = 0;
+        
+        // Simulación de reset manual
+        #100 rst_a_p = 1;
+        #20 rst_a_p = 0;
+
+        // Ejecutar la simulación por algunos segundos
+        #100000000;
+        
+        // Terminar simulación
+        $stop;
+    end
+
+    // Monitoreo de la salida en la consola
+    initial begin
+        $monitor("Time = %0t | seg_out = %b", $time, seg_out);
+    end
+    
+endmodule
